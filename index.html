@@ -1,21 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta>
+	<meta charset="utf-8">
 	<title>Huckle Buckle Beanstalk</title>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/progressbar.css">
 </head>
 <body>
 	<div class="wrapper">
 		<h1>Huckle buckle beanstalk</h1>
-		<p>In this game the computer generates a random number<br>
+		<p id="instruction">In this game the computer generates a random number<br>
 			so you are to guess the value of the number being generated<br>
-			If the background image turns red then your value is close to the answer<br>
-			If not then it's turns blue.
+			Your closeness to the number will be determine by a progress bar<br>
+			The closer you are the larger your percentage value.
 		</p>
+		<div id="status" class="cold hot"></div>
+		<div class="round-pink" id="progressBar"><div></div></div>
+		<br>
+		<form id="userGuess">
+			<div>	
+				<input id="int"  type="text" value="Please Enter a value" onfocus="value=''">
+				<input  type="submit" value="Ok">
+			</div>
+		</form>	
 	</div>
 	<script src="javascript/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
-<script src="javascript/apps.js" type="text/javascript" charset="utf-8"></script>
+	<script src="javascript/apps.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

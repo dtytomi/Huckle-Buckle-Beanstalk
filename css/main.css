@@ -1,6 +1,6 @@
 html {
 	height: 100%;
-	background: url("../img/bg.jpg") no-repeat center;
+	background: url("../img/hs.jpg") no-repeat center;
 	background-size: cover;
 	
 }
@@ -12,3 +12,56 @@ html {
 	
 }
 
+h1 {
+	color:#F6C;
+}
+
+p {
+	color: #FF9;
+}
+
+
+
+#progressBar {
+        width: 400px;
+        height: 22px;
+        border: 1px solid #111;
+        background-color: #292929;
+        margin-left: 35%;
+}
+ 
+#progressBar div {
+        height: 100%;
+        color: #fff;
+        text-align: right;
+        line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+        width: 0;
+        background-color: #0099ff;
+}
+
+#int {
+	 border-radius: 10px;
+	 font-size: 18px;	
+}
+
+#start {
+	border-radius: 10px;
+	font-size: 20px;
+	background: #F33;
+	
+}
+
+#status {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.cold {
+	color: #00F;
+	font-size: 20px;
+}
+
+.hot {
+	color: red;
+	font-size: 20px;
+}
