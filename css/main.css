@@ -1,23 +1,28 @@
 html {
 	height: 100%;
-	background: url("../img/hs.jpg") no-repeat center;
+	background: url("../img/pc.jpg") no-repeat center;
 	background-size: cover;
 	
 }
 
 .wrapper {
-	margin-top: 150px;
+	margin-top: 50px;
 	padding-left: 50px;
 	text-align: center;
+	font-family: Abel, "Noto Sans", Lora, "PT Serif", "Open Sans Condensed";
 	
 }
 
 h1 {
-	color:#F6C;
+	color:#000;
+	font-style: italic;
+	font-variant: small-caps;
+
 }
 
 p {
-	color: #FF9;
+	color: #1F0A00;
+	font-size: 30px;
 }
 
 
@@ -36,18 +41,21 @@ p {
         text-align: right;
         line-height: 22px; /* same as #progressBar height if we want text middle aligned */
         width: 0;
-        background-color: #0099ff;
+        /*background-color: #0099ff;*/
 }
 
 #int {
 	 border-radius: 10px;
 	 font-size: 18px;	
+	 margin-right: 20px;
+	 text-align: center;
 }
 
 #start {
 	border-radius: 10px;
-	font-size: 20px;
-	background: #F33;
+	font-size: 30px;
+	background: #CC9900;
+
 	
 }
 
@@ -64,4 +72,38 @@ p {
 .hot {
 	color: red;
 	font-size: 20px;
+}
+
+.progess_cold{
+	background-color: #00F;
+}
+
+.progess_hot{
+	border-radius: 9px;
+	box-shadow: 0 2px 2px #333;	
+	background-color: red;
+}
+
+#userGuess {
+	margin-top: 40px;
+	vertical-align: center;
+}
+
+
+#play {
+	margin-top: 30px;
+	margin-right: 20px;
+	font-size: 20px;
+	background: #CC9900;
+	text-align: center;
+	padding: 5px 5px;
+}
+
+#try-again {
+	margin-top: 30px;
+	margin-left: 20px;
+	font-size: 20px;
+	background: #CC9900;
+	text-align: center;
+	padding: 5px 5px
 }

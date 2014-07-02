@@ -44,37 +44,49 @@ var testGuess = function(guess){
 		
 		if ( cur_dist < prev_dist) {
 				// alert("You are Hot");
+				$("#kk").css("background-color", "red");
 				progressBar(thermometer, $('#progressBar'));
 				$("#status").removeClass().addClass("hot").text("You are Hot");
 				
 		}
 
-		if( cur_dist > prev_dist){
+		else if( cur_dist > prev_dist || cur_dist === prev_dist ){
+			$("#kk").css("background-color", "blue");
 			progressBar(thermometer, $('#progressBar'));
 			// alert("You are Cold");
 			$("#status").removeClass().addClass("cold").text("You are Cold");
 		}
 
-		else if( cur_dist === prev_dist) {
-			progressBar(cur_dist, $('#progressBar'));
-			// alert("You are Cold");
-			$("#status").removeClass().addClass("cold").text("You are Cold");
-		}
 		prev_dist = cur_dist;
 	}
 	else{
-		$("#status").text("Congratulation's you won");
+		$("#status").removeClass().addClass("hot").text("Congratulation's you won");
+		$("#kk").css("background-color", "red");
 		progressBar(100, $('#progressBar'));
 	}
 	
 }
 
-$("#userGuess").submit(function(event){
+$("#play").click(function(event){
 	event.preventDefault();
 		
 	var guess = parseInt($("#int").val());
 
-	testGuess(guess);
-
-	$("#int").val('');
+	$("#int").val('');	
+	
+	if( guess > 100 || guess < 0 || isNaN(guess)){
+		alert("Not a valid Input");
+	}
+	else {
+		testGuess(guess);
+	}
+	
 });
+
+$("#try-again").click(function(event){
+	event.preventDefault();
+
+	window.location = "file:///C:/Users/Ayoola/Documents/Source/HTML/Huckle_Buckle_Beanstalk/index.html";
+});
+
+
