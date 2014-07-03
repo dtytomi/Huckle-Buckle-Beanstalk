@@ -3,27 +3,29 @@
 <head>
 	<meta charset="utf-8">
 	<title>Huckle Buckle Beanstalk</title>
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,400italic|Open+Sans+Condensed:300|PT+Sans+Narrow|Lora:400,400italic,700italic|Merriweather:400,300|Indie+Flower|Shadows+Into+Light|Abel&subset=latin,greek-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/progressbar.css">
 </head>
 <body>
 	<div class="wrapper">
-		<h1>Huckle buckle beanstalk</h1>
+		<h1>Huckle Buckle Beanstalk</h1>
 		<p id="instruction">In this game the computer generates a random number<br>
 			so you are to guess the value of the number being generated<br>
 			Your closeness to the number will be determine by a progress bar<br>
 			The closer you are the larger your percentage value.
 		</p>
+		<div>
+		    <form id="userGuess">
+				<input id="int"  type="text" value="Please Enter a value" onfocus="value=''"><br>
+				<input id="newGame" type="button" value="New Game">
+				<input id="play" type="submit" value="Guess">
+			</form>
+		</div>
 		<div id="status" class="cold hot"></div>
-		<div class="round-pink" id="progressBar"><div></div></div>
-		<br>
-		<form id="userGuess">
-			<div>	
-				<input id="int"  type="text" value="Please Enter a value" onfocus="value=''">
-				<input  type="submit" value="Ok">
-			</div>
-		</form>	
+		<div class="round-pink" id="progressBar"><div id="meter"></div></div>
+		<br>	
 	</div>
 	<script src="javascript/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="javascript/apps.js" type="text/javascript" charset="utf-8"></script>
