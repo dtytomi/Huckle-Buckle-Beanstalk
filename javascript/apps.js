@@ -65,7 +65,7 @@ var testGuess = function(guess){
 		prev_dist = cur_dist;
 	}
 	else{
-		$("#status").removeClass().addClass("hot").text("Congratulation's you won");
+		$("#status").removeClass().text("Congratulation's you won");
 		$('#meter').removeClass().addClass("meter_hot");
 		progressBar(100, $('#progressBar'));
 	}
