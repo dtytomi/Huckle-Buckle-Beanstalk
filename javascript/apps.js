@@ -90,5 +90,5 @@ $("#userGuess").on("submit", function(event){
 $("#newGame").click(function(event){
 	event.preventDefault();
 
-	window.location = "C:/Users/Ayoola/Documents/Source/HTML/Huckle_Buckle_Beanstalk/index.html"
+	window.location = "https://dtytomi.github.io/Huckle-Buckle-Beanstalk/"
 });
