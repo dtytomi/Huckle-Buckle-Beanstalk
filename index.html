@@ -14,18 +14,18 @@
 		<p id="instruction">In this game the computer generates a random number<br>
 			so you are to guess the value of the number being generated<br>
 			Your closeness to the number will be determine by a progress bar<br>
-			The closer you are the more Hot you will be.
+			The closer you are the larger your percentage value.
 		</p>
-		<div id="status" class="cold hot"></div>
-		<div class="round-pink" id="progressBar"><div id='kk'></div></div>
-		<br>
-		<div id="userGuess">
-			<form  action="#">
-				<input id="int"  type="text" value="Please Enter a value" onfocus="value=''"> <br>
-				<input  type="button" value="Guess" id="play">
-				<input type="button" value="New Game" id="try-again">
+		<div>
+		    <form id="userGuess">
+				<input id="int"  type="text" value="Please Enter a value" onfocus="value=''"><br>
+				<input id="newGame" type="button" value="New Game">
+				<input id="play" type="submit" value="Guess">
 			</form>
-		</div>	
+		</div>
+		<div id="status" class="cold hot"></div>
+		<div class="round-pink" id="progressBar"><div id="meter"></div></div>
+		<br>
 	</div>
 	<script src="javascript/jquery-2.1.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="javascript/apps.js" type="text/javascript" charset="utf-8"></script>

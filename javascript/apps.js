@@ -43,50 +43,50 @@ var testGuess = function(guess){
 	if( cur_guess != random){
 		
 		if ( cur_dist < prev_dist) {
-				// alert("You are Hot");
-				$("#kk").css("background-color", "red");
-				progressBar(thermometer, $('#progressBar'));
-				$("#status").removeClass().addClass("hot").text("You are Hot");
+			// alert("You are Hot");
+			$("#meter").removeClass().addClass("meter_hot");
+			progressBar(thermometer, $('#progressBar'));
+			$("#status").removeClass().addClass("hot").text("You are Hot");
 				
 		}
 
-		else if( cur_dist > prev_dist || cur_dist === prev_dist ){
-			$("#kk").css("background-color", "blue");
+		if( cur_dist > prev_dist){
+			$("#meter").removeClass().addClass("meter_cold");
 			progressBar(thermometer, $('#progressBar'));
 			// alert("You are Cold");
 			$("#status").removeClass().addClass("cold").text("You are Cold");
 		}
-
+		else if( cur_dist === prev_dist) {
+			$("#meter").removeClass().addClass("meter_cold");
+			progressBar(cur_dist, $('#progressBar'));
+				// alert("You are Cold");
+			$("#status").removeClass().addClass("cold").text("You are Cold");
+		}
 		prev_dist = cur_dist;
 	}
 	else{
 		$("#status").removeClass().addClass("hot").text("Congratulation's you won");
-		$("#kk").css("background-color", "red");
+		$('#meter').removeClass().addClass("meter_hot");
 		progressBar(100, $('#progressBar'));
 	}
 	
 }
 
-$("#play").click(function(event){
+$("#userGuess").on("submit", function(event){
 	event.preventDefault();
-		
 	var guess = parseInt($("#int").val());
 
-	$("#int").val('');	
-	
-	if( guess > 100 || guess < 0 || isNaN(guess)){
-		alert("Not a valid Input");
+	if (isNaN(guess) || guess > 100 || guess < 0) {
+		alert("Not a valid input");
 	}
 	else {
-		testGuess(guess);
-	}
-	
+			testGuess(guess);
+	}		
+	$("#int").val('');
 });
 
-$("#try-again").click(function(event){
+$("#newGame").click(function(event){
 	event.preventDefault();
 
-	window.location = "file:///C:/Users/Ayoola/Documents/Source/HTML/Huckle_Buckle_Beanstalk/index.html";
+	window.location = "C:/Users/Ayoola/Documents/Source/HTML/Huckle_Buckle_Beanstalk/index.html"
 });
-
-
